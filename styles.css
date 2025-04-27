@@ -3,11 +3,9 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
-}
-
-html {
-  scroll-padding-top: 80px; /* Adjust this value to match your header height */
+  color: #FDCFC0; /* Set all text color */
+  font-size: 1rem; /* Base font size */
+  line-height: 1.6; /* Improve readability */
 }
 
 .container {
@@ -16,21 +14,54 @@ html {
   margin: 0 auto;
 }
 
+/* Navbar Styles */
 header {
-  background-color: #ffffff; /* White navbar */
-  color: #000; /* Dark text for contrast */
+  background-color: #1F0534; /* Navbar background color */
+  color: #FDCFC0; /* Navbar text color */
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+header h1 {
+  font-family: 'Georgia', serif; /* Use Times New Roman */
+  font-size: 2.5rem; /* Adjust size */
+  color: #FDCFC0; /* Match the navbar text color */
+  margin: 0;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Increase spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav a {
+  color: #FDCFC0; /* Navbar link text color */
+  text-decoration: none;
+  font-weight: 700; /* Make the text bold */
+  font-size: 1.2rem; /* Increase font size */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #ffffff; /* Slightly lighter color on hover */
 }
 
 .logo {
@@ -45,39 +76,14 @@ header .container {
 }
 
 .logo-icon {
-  height: 100px;
+  height: 150px; /* Adjust logo size */
+  width: auto;
 }
 
-.logo-text {
-  height: 100px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-}
-
-nav ul li {
-  text-align: center;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #0056b3; /* Optional: a subtle brand color hover effect */
-}
-
+/* Hero Section */
 .hero {
   background: url('images/bgc.png') center center / cover no-repeat;
-  color: white;
+  color: #FDCFC0; /* Hero text color */
   padding: 6rem 0;
   text-align: center;
   position: relative;
@@ -87,7 +93,7 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* Increased from 0.4 to 0.5 */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -97,59 +103,84 @@ nav a:hover {
 }
 
 .hero h1 {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero h2 {
-  font-size: 2.2rem;
+  font-size: 3rem; /* Increase heading size */
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem; /* Increase paragraph size */
+  margin-bottom: 2rem;
 }
 
 .hero .btn {
-  background-color: #822e5b;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none; /* Remove underline */
-  border-radius: 6px;
+  font-size: 1.2rem; /* Increase button text size */
+  padding: 1rem 2rem; /* Add more padding */
+  background-color: #1F0534; /* Button background color */
+  color: #FDCFC0; /* Button text color */
   border: none;
-  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #bf5f82;
-  cursor: pointer;
+#services h2 {
+  color: #1F0534; /* Same color as the navbar background */
 }
 
+#services h2 {
+  scroll-margin-top: 80px; /* Match the navbar height */
+}
+
+.hero .btn:hover {
+  background-color: #4a235a; /* Slightly lighter hover effect */
+}
+
+/* Section Styles */
 .section {
   padding: 3rem 0;
+  color: #FDCFC0; /* Section text color */
 }
 
 .section.alt {
-  background-color: #f4f4f4;
+  background-color: #1F0534; /* Alternate section background */
 }
 
 h3 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
+  color: #FDCFC0; /* Heading text color */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #FDCFC0; /* Heading text color */
 }
 
 /* Services Section */
 .grid {
-  display: grid; /* Use grid layout for better control */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-  gap: 2rem; /* Add spacing between cards */
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Add spacing between cards */
+    margin-top: 2rem;
+}
+
+/* Services Section */
+.card .icon {
+  text-align: center; /* Center the icon */
+  margin-bottom: 1rem; /* Add spacing below the icon */
+}
+
+.card .icon i {
+  font-size: 6rem; /* Increase the icon size */
+  color: inherit; /* Keep the icon color consistent with the text */
 }
 
 .card {
-  background: white;
+  background: #1F0534; /* Card background color */
+  color: #FDCFC0; /* Card text color */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -157,96 +188,65 @@ h3 {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px); /* Add a hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
-/* Meet Our Team Section */
-#team {
-  padding: 4rem 0;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-#team h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.team-member {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-  max-width: 300px;
-}
-
-.team-member img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
+.card h4 {
+  font-size: 1.5rem; /* Increase card heading size */
   margin-bottom: 1rem;
 }
 
-.team-member h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+.card p {
+  font-size: 1.1rem; /* Increase card description size */
 }
 
-.team-member p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
+/* Contact Section */
+#contact {
+  background-color: #FFFFFF; /* Set the entire section background to white */
+  color: #1F0534; /* Adjust text color for contrast */
+  padding: 3rem 0; /* Add padding for spacing */
 }
 
-/* Contact Section Improvements */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
   align-items: flex-start;
-  background: #f9f9f9;
+  /*background: #1F0534; *//* Contact section background */
+  background-color: #1F0534;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1100px; /* Constrain the width */
-  margin: 0 auto; /* Center the container */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .contact-details {
-  flex: 1 1 300px; /* Ensure both sections take equal space */
-  max-width: 100%; /* Prevent overextending */
+  flex: 1 1 300px;
+  max-width: 100%;
   font-size: 1rem;
   line-height: 1.8;
+  color: #FDCFC0; /* Contact details text color */
 }
 
 .contact-details h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #FDCFC0;
 }
 
 .contact-details p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  word-wrap: break-word; /* Prevent text from overflowing */
+  word-wrap: break-word;
 }
 
 .contact-details a {
-  color: #007BFF;
+  color: #FDCFC0; /* Link color */
   text-decoration: none;
 }
 
@@ -261,18 +261,18 @@ h3 {
 
 .contact-form {
   flex: 1 1 300px;
-  background: #fff;
+  background: #1F0534; /* Form background color */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 500px; /* Limit the form width */
-  margin: 0 auto; /* Center the form */
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .contact-form h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #FDCFC0;
 }
 
 .form-group {
@@ -283,7 +283,7 @@ h3 {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: #333;
+  color: #FDCFC0; /* Label text color */
 }
 
 .form-group input,
@@ -299,50 +299,9 @@ h3 {
   resize: none;
 }
 
-.contact-details .social-icons a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.contact-details .social-icons a:hover {
-  transform: scale(1.1);
-}
-
-.contact-details .social-icons img {
-  width: 32px;
-  height: 32px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column; /* Stack label and input vertically */
-}
-
-.contact-form label {
-  margin-bottom: 0.5rem; /* Add consistent spacing below the label */
-  font-weight: bold;
-  color: #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%; /* Ensure inputs take full width */
-  padding: 0.8rem; /* Add consistent padding inside inputs */
-  border: 1px solid #ddd;
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem;
-  box-sizing: border-box; /* Prevent padding from affecting width */
-}
-
-.contact-form textarea {
-  resize: none; /* Prevent resizing of the textarea */
-}
-
 .btn {
-  background: #6c3483;
-  color: #fff;
+  background: #1F0534; /* Button background color */
+  color: #FDCFC0; /* Button text color */
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
@@ -350,6 +309,7 @@ h3 {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  text-decoration: none !important; /* Remove underline */
 }
 
 .btn:hover {
@@ -358,7 +318,6 @@ h3 {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-  /* Header */
   header .container {
     flex-direction: column;
     align-items: center;
@@ -370,15 +329,123 @@ h3 {
     gap: 1rem;
   }
 
-  .logo-icon, .logo-text {
-    height: 80px; /* Adjust logo size for smaller screens */
-  }
-
-  /* Hero Section */
   .hero {
     padding: 4rem 1rem;
   }
 
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Ensure the #services section aligns properly */
+  #services {
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    overflow: hidden; /* Prevent content from overflowing */
+  }
+
+  /* Ensure the grid stays within the container */
+  .grid {
+    margin: 0 auto; /* Center the grid */
+    padding: 0; /* Remove extra padding */
+    max-width: 100%; /* Ensure the grid doesn't exceed the container width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+
+  /* Ensure cards fit properly within the grid */
+  .card {
+    margin: 0 auto; /* Center the cards */
+    width: 100%; /* Ensure cards take full width */
+    max-width: 300px; /* Limit the card width */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card .icon {
+    text-align: center; /* Center the icon */
+    margin-bottom: 1rem; /* Add spacing below the icon */
+  }
+
+  .card .icon i {
+      font-size: 4rem; /* Make the icon larger */
+      color: #1F0534; /* Match the theme color */
+  }
+
+  .card h4 {
+      text-align: center; /* Center the heading */
+      font-size: 1.5rem; /* Adjust heading size */
+      margin-top: 0.5rem;
+  }
+
+  .card p {
+      text-align: center; /* Center the description */
+      font-size: 1rem; /* Adjust description size */
+      margin-top: 0.5rem;
+  }
+
+  .contact-details, .contact-form {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form label {
+    font-size: 0.9rem;
+  }
+
+  /* Center the Send button */
+  .contact-form .btn {
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+    text-align: center; /* Ensure text inside the button is centered */
+    padding-left: 0px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  /* Ensure text fields stay within the container */
+  .form-group input,
+  .form-group textarea {
+    width: calc(100% - 2rem); /* Subtract padding to prevent overflow */
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    max-width: 100%; /* Prevent fields from exceeding the container width */
+  }
+}
+
+@media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -387,79 +454,9 @@ h3 {
     font-size: 1rem;
   }
 
-  .hero .btn {
+  .btn {
+    font-size: 0.9rem;
     padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  /* Services Section */
-  .grid {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
-    gap: 1.5rem; /* Reduce gap between cards */
-  }
-
-  .card {
-    width: 100%; /* Full width for cards */
-  }
-
-  /* Team Section */
-  .team-grid {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .team-member {
-    max-width: 100%;
-  }
-
-  /* Contact Section */
-  .contact-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .contact-details, .contact-form {
-    width: 100%;
-  }
-
-  .contact-form {
-    padding: 1rem; /* Reduce padding for smaller screens */
-  }
-
-  .contact-form .form-group {
-    margin-bottom: 1rem; /* Reduce spacing between form fields */
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.6rem; /* Reduce padding inside inputs */
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-  }
-
-  .contact-form label {
-    font-size: 0.9rem; /* Adjust label font size */
-  }
-
-  .btn {
-    width: 100%; /* Make the button full width */
-    padding: 0.6rem; /* Adjust padding for smaller screens */
-    font-size: 1rem; /* Ensure readable font size */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjustments for very small screens */
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .btn {
-    font-size: 0.8rem;
-    padding: 0.4rem 0.8rem;
   }
 
   nav ul {
@@ -471,14 +468,14 @@ h3 {
   }
 
   .card {
-    padding: 1.5rem; /* Reduce padding for smaller screens */
+    padding: 1.5rem;
   }
 
   .card h4 {
-    font-size: 1.2rem; /* Adjust heading size */
+    font-size: 1.2rem;
   }
 
   .card p {
-    font-size: 0.9rem; /* Adjust paragraph size */
+    font-size: 0.9rem;
   }
 }
