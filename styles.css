@@ -20,8 +20,8 @@ header {
   color: #FDCFC0; /* Navbar text color */
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   z-index: 1000;
 }
 
@@ -239,19 +239,19 @@ h2 {
 }
 
 .contact-details p {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  word-wrap: break-word;
+  word-wrap: break-word; /* Ensure long text wraps */
+  word-break: break-word; /* Break long words if necessary */
+  overflow-wrap: break-word; /* Ensure compatibility with all browsers */
+  margin: 0.5rem 0; /* Add spacing between paragraphs */
 }
 
 .contact-details a {
-  color: #FDCFC0; /* Link color */
-  text-decoration: none;
+  color: inherit; /* Match the text color */
+  text-decoration: none; /* Remove underline */
 }
 
 .contact-details a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Add underline on hover */
 }
 
 .contact-details img {
