@@ -174,8 +174,8 @@ h2 {
 }
 
 .card .icon i {
-  font-size: 6rem; /* Increase the icon size */
-  color: inherit; /* Keep the icon color consistent with the text */
+  font-size: 6rem !important; /* Increase the icon size */
+  color: inherit !important; /* Keep the icon color consistent with the text */
 }
 
 .card {
